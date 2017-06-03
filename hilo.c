@@ -18,7 +18,7 @@ int setDifficulty() //asks user for difficulty (# of lives)
     
     while (numLives < 1 || numLives > 3)
     {
-        printf("\nYou have entered an invalid number of lives. Please enter a number between 1-3 ");
+        printf("\nYou have entered an invalid number of lives. Please enter a number between 1-3. ");
         scanf("%d", &numLives);
     }
     
@@ -33,20 +33,11 @@ int howManyNums() //asks user how many #s he wants to play with
     
     while (length < 4 || length > 20)
     {
-        printf("You have entered an invalid number. Please enter a number between 4-20 ");
+        printf("You have entered an invalid number. Please enter a number between 4-20. ");
         scanf("%d", &length);
     }
     
     return length;
-}
-
-int* buildArray(int length) //builds array of ints
-{
-    int* array = malloc(sizeof(*array) * length + 1); //freed in main
-    
-    for(int i = 0; i < length; i++)     array[i] = i + 1;
-    
-    return array;
 }
 
 void playGame(int length, int lives) //starts the game
@@ -91,7 +82,7 @@ void playGame(int length, int lives) //starts the game
         else
         {
             lives--;
-            printf("\n\nOUCH! That's incorrect! The number was %d", second);
+            printf("\n\nOUCH, that's incorrect! The number was %d!", second);
         }
         
         first = second;
