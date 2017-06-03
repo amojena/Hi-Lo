@@ -23,7 +23,6 @@ int main(int argc, char ** argv)
     //start game function passing as parameters the array and the number of lives
     playGame(length, array, lives);
     
-    printf("\n\nThanks for playing!\n\n");
     free(array);
     
     

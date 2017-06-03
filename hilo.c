@@ -72,7 +72,7 @@ void playGame(int length, int* array, int lives) //starts the game
         if (first >= second)     temp = "lo";
         if (first < second)   temp = "hi";
         
-        printf("\nYou have %d lives!\n", lives);
+        printf("\nYou have %d lives and %d points!\n\n", lives, score);
         printf("The new number is %d. Will the next number be higher (hi) or lower (lo)? ", first);
         scanf("%s", guess);
         
@@ -86,13 +86,12 @@ void playGame(int length, int* array, int lives) //starts the game
         {
             printf("\n\nGood job!");
             score++;
-            printf("Your score is now: %d", score);
         }
         
         else
         {
             lives--;
-            printf("Ouch! That's incorrect! The number was %d\n", second);
+            printf("\n\nOUCH! That's incorrect! The number was %d", second);
         }
         
         first = second;
@@ -100,5 +99,7 @@ void playGame(int length, int* array, int lives) //starts the game
         
     }//first while
     
+    printf("\n\nThanks for playing!\n\n");
+    return;
 }
 
