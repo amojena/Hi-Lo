@@ -49,7 +49,7 @@ int* buildArray(int length) //builds array of ints
     return array;
 }
 
-void playGame(int length, int* array, int lives) //starts the game
+void playGame(int length, int lives) //starts the game
 {
     //intialization for random number generator
     time_t seed;
