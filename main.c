@@ -14,18 +14,17 @@ int main(int argc, char ** argv)
     printf("You want %d lives\n", lives);
     
     
-    //ask user how many numbers he/she would like to play with, returns an array of ints (calls building array function in it)
+    //ask user how many numbers he/she would like to play with
     int length = howManyNums();
     
-    int* array = buildArray(length);
-    
-    for (int i = 0; i < length; i ++)
-    {
-            printf("%d ", array[i]);
-    }
-    printf("\n");
+    //makes an array of size length
+    int* array = buildArray(length); //has to be freed after game is over
     
     //start game function passing as parameters the array and the number of lives
+    playGame(length, array, lives);
+    
+    printf("\n\nThanks for playing!\n\n");
+    free(array);
     
     
     return EXIT_SUCCESS;

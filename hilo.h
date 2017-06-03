@@ -9,4 +9,4 @@ int howManyNums(); //asks user how many #s he wants to play with
 
 int* buildArray(int length); //builds array of ints
 
-void playGame(int* array, int lives); //starts the game
+void playGame(int length, int* array, int lives); //starts the game
