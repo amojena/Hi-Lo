@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "hilo.h"
 
 void welcomeUser()//welcomes user and gives instructions
@@ -50,6 +51,11 @@ int* buildArray(int length) //builds array of ints
 
 void playGame(int length, int* array, int lives) //starts the game
 {
+    //intialization for random number generator
+    time_t seed;
+    srand((unsigned) time(&seed));
+    //credit: goo.gl/VkjvHp
+    
     int first = rand() % (length + 1);
     int second = rand() % (length + 1);
     int score = 0;
